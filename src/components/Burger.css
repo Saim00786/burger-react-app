@@ -1,0 +1,29 @@
+.container{
+  display: inline-flex;
+}
+
+.burger-ingredients{
+  overflow-y: auto;
+  margin: 10px;
+  display: inline-flex;
+  flex-direction: column;
+}
+.burger-interface{
+  background-color: #daac49;
+  width: 500px;
+  height: 500px;
+  padding: 10px;
+}
+
+.button-group{
+  display: inline-flex;
+}
+
+.button-group > button{
+  width: 75px;
+  height: 25px;
+}
+
+.ingredients{
+  margin: 2px;
+}
