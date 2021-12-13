@@ -16,7 +16,6 @@ export default function Burger() {
     let newIngredients = ingredients;
     newIngredients[e.target.value] += 1;
     setIngredients(newIngredients);
-    console.log(ingredients);
     burgerContent();
   }
   
@@ -25,7 +24,6 @@ export default function Burger() {
     if(newIngredients[e.target.value] > 0){
       newIngredients[e.target.value] -= 1;
       setIngredients(newIngredients);
-      console.log(ingredients);
     }
     burgerContent();
   }
@@ -51,7 +49,7 @@ export default function Burger() {
     <div className='container'>
       <div className="burger-ingredients">
         <img src ={Top} alt= 'Burger top'/>
-        {burger}
+        {burger.length === 0 ? <p>Start adding ingredients.</p> : burger }
         <img src ={Bottom} alt= 'Burger bottom'/>
       </div>
       <div className="burger-interface">
@@ -64,17 +62,17 @@ export default function Burger() {
           </div>
         </div>
         <div className="ingredients-group">
-          <h3>Cheese</h3>
-          <div className="button-group">
-            <button onClick={addIngredient} value= 'cheese'>Add</button>
-            <button onClick={removeIngredient} value= 'cheese'>Remove</button>
-          </div>
-        </div>
-        <div className="ingredients-group">
           <h3>Tomato</h3>
           <div className="button-group">
             <button onClick={addIngredient} value= 'tomato'>Add</button>
             <button onClick={removeIngredient} value= 'tomato'>Remove</button>
+          </div>
+        </div>
+        <div className="ingredients-group">
+          <h3>Cheese</h3>
+          <div className="button-group">
+            <button onClick={addIngredient} value= 'cheese'>Add</button>
+            <button onClick={removeIngredient} value= 'cheese'>Remove</button>
           </div>
         </div>
         <div className="ingredients-group">
